@@ -11,12 +11,12 @@ func (s *AuthRepository) InsertUser(ctx context.Context, data request.RegisterRe
 		Username: data.Username,
 		Password: data.Password,
 		Fullname: data.Name,
+		Level:    data.Level,
 	}
 	result := s.super.PostgresSql.Create(&user)
 	if result.Error != nil {
 		return nil, result.Error
 	}
 
-	// Jika berhasil membuat pengguna, kembalikan data pengguna.
 	return &user, nil
 }

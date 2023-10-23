@@ -16,7 +16,8 @@ type ListPlayerResponse struct {
 
 type Player struct {
 	ID        uint      `json:"id"`
-	Name      string    `json:"nama_lengkap"`
+	Name      string    `json:"fullname"`
 	Username  string    `json:"username"`
+	Level     string    `json:"level"`
 	CreatedAt time.Time `json:"created_at"`
 }

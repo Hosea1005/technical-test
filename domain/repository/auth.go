@@ -11,7 +11,7 @@ type AuthRepository interface {
 	InsertUser(ctx context.Context, data request.RegisterRequest) (*model.User, error)
 	InsertWallet(ctx context.Context, id int64) error
 	CheckDataUser(ctx context.Context, username string) (*model.User, error)
-	GetListPlayer(ctx context.Context) (*[]model.User, error)
+	GetListPlayer(ctx context.Context, userLevel string) (*[]model.User, error)
 	GetDetailPlayer(ctx context.Context, id int64) (*model.User, error)
 	InsertAccount(ctx context.Context, data request2.CreateAccountRequest) error
 	CheckIdBank(ctx context.Context, id int64) error

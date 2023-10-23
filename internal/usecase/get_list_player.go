@@ -17,7 +17,7 @@ func (a AuthUseCase) GetListPlayer(ctx context.Context, request lRequest.ListPla
 			},
 		}
 	}
-	resUser, err := a.UserRepository.GetListPlayer(ctx)
+	resUser, err := a.UserRepository.GetListPlayer(ctx, request.Search)
 	if err != nil {
 		return &lResponse.ListPlayerResponse{
 			Status: lResponse.Status{
@@ -32,6 +32,7 @@ func (a AuthUseCase) GetListPlayer(ctx context.Context, request lRequest.ListPla
 			ID:        user.ID,
 			Name:      user.Fullname,
 			Username:  user.Username,
+			Level:     user.Level,
 			CreatedAt: user.CreatedAt,
 		})
 	}

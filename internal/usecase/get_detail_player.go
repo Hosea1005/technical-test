@@ -82,6 +82,7 @@ func (a AuthUseCase) GetDetailPlayer(ctx context.Context, request dRequest.Detai
 				ID:        resUser.ID,
 				Name:      resUser.Fullname,
 				Username:  resUser.Username,
+				Level:     resUser.Level,
 				CreatedAt: resUser.CreatedAt,
 				Account: dResponse.Account{
 					ID:      resAccount.ID,

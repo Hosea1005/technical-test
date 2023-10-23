@@ -2,14 +2,12 @@ package http
 
 import (
 	"github.com/gorilla/mux"
-	"log"
 	"net/http"
 	"service-auth/helper"
 	"service-auth/internal/http/detail_player/request"
 )
 
 func (a AuthHandler) GetDetailPlayer(w http.ResponseWriter, r *http.Request) {
-	log.Println("MASUK")
 	var (
 		req request.DetailPlayerRequest
 	)

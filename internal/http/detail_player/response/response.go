@@ -18,6 +18,7 @@ type Player struct {
 	ID        uint      `json:"id"`
 	Name      string    `json:"fullname"`
 	Username  string    `json:"username"`
+	Level     string    `json:"level"`
 	Account   Account   `json:"account"`
 	Wallet    Wallet    `json:"wallet"`
 	CreatedAt time.Time `json:"created_at"`
